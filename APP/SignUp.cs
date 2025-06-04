@@ -12,6 +12,7 @@ namespace APP
 {
     public partial class SignUp : Form
     {
+        SignUpDB signUpDB = new SignUpDB();
         public SignUp()
         {
             InitializeComponent();
@@ -34,12 +35,13 @@ namespace APP
 
         private void password_text_box_TextChanged(object sender, EventArgs e)
         {
-
+            password_text_box.UseSystemPasswordChar = true;
         }
 
         private void signup_window_button_Click(object sender, EventArgs e)
         {
-
+            signUpDB.SignUp(username_text_box.Text, email_text_box.Text, password_text_box.Text);
+            this.Close();
         }
     }
 }

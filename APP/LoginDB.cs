@@ -8,31 +8,37 @@ using System.Windows.Forms;
 
 namespace APP
 {
-    internal class LoginDB
+    public class LoginDB
     {
-        public void CheckValid(string email, string password)
+        public static int UserId;
+        public static string UserName;
+        public void CheckValid(string email, string password, Form f1, Form f2)
         {
             using (SqlConnection conn = DBHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT UserID FROM Users WHERE Email = '" + email + "' AND PasswordHash = '" + password + "'";
+                string query = "SELECT UserID, Username FROM Users WHERE Email = '" + email + "' AND PasswordHash = '" + password + "'";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        // User exists, proceed with login
+                        
                         while (reader.Read())
                         {
                             int userId = reader.GetInt32(0);
-                            // Handle successful login, e.g., store userId or redirect
+                            UserId = userId;
+                            UserName = reader.GetString(1);
                         }
+                        reader.Close();
+                        f1.Hide();
+                        f2.Show();
                     }
                     else
                     {
-                        // User does not exist, handle invalid login
+                        
                         MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //throw new Exception("Invalid username or password.");
+                        
                     }
                 }
             }

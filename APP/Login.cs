@@ -50,7 +50,8 @@ namespace APP
 
         private void Login_button_Click(object sender, EventArgs e)
         {
-            loginDB.CheckValid(email_text_box.Text, textBox1.Text);   
+            UserOptions userOptionsForm = new UserOptions();
+            loginDB.CheckValid(email_text_box.Text, textBox1.Text, this, userOptionsForm); 
         }
 
         private void SignUp_Button_Click(object sender, EventArgs e)
