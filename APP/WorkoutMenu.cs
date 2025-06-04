@@ -30,5 +30,36 @@ namespace APP
             startWorkoutDB.AddExercise();
             MessageBox.Show(startWorkoutDB.getE());
         }
+
+        private void search0_Click(object sender, EventArgs e)
+        {
+            if (search0.Text != "search0")
+            {
+                ExerciseSetting es = new ExerciseSetting();
+                SearchExerciseDB.chosenExerciseName = search0.Text;
+                es.Show();
+                this.Close();
+            }
+        }
+
+        private void search1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

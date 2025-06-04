@@ -54,6 +54,7 @@
             this.search0.Size = new System.Drawing.Size(67, 23);
             this.search0.TabIndex = 1;
             this.search0.Text = "search0";
+            this.search0.Click += new System.EventHandler(this.search0_Click);
             // 
             // search1
             // 
@@ -64,6 +65,7 @@
             this.search1.Size = new System.Drawing.Size(64, 23);
             this.search1.TabIndex = 2;
             this.search1.Text = "search1";
+            this.search1.Click += new System.EventHandler(this.search1_Click);
             // 
             // search2
             // 
@@ -74,6 +76,7 @@
             this.search2.Size = new System.Drawing.Size(67, 23);
             this.search2.TabIndex = 3;
             this.search2.Text = "search2";
+            this.search2.Click += new System.EventHandler(this.search2_Click);
             // 
             // search3
             // 
@@ -84,6 +87,7 @@
             this.search3.Size = new System.Drawing.Size(67, 23);
             this.search3.TabIndex = 4;
             this.search3.Text = "search3";
+            this.search3.Click += new System.EventHandler(this.search3_Click);
             // 
             // search4
             // 
@@ -94,6 +98,7 @@
             this.search4.Size = new System.Drawing.Size(67, 23);
             this.search4.TabIndex = 5;
             this.search4.Text = "search4";
+            this.search4.Click += new System.EventHandler(this.search4_Click);
             // 
             // listOfExercises
             // 

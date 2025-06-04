@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace APP
+{
+    public partial class ExerciseSetting : Form
+    {
+        public ExerciseSetting()
+        {
+            InitializeComponent();
+        }
+
+        private void confirm_button_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

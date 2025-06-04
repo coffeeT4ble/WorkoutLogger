@@ -42,5 +42,17 @@ namespace APP
             }
             return all.ToString();
         }
+        public void startWorkout()
+        {
+            using (SqlConnection conn = DBHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "INSERT INTO WorkoutSessions(StartTime, UserID) VALUES(GETDATE(), "+LoginDB.UserId+");";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
