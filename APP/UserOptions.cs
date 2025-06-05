@@ -15,14 +15,28 @@ namespace APP
         public UserOptions()
         {
             InitializeComponent();
+            welcome.Text = "Welcome " + LoginDB.UserName + "!";
         }
         StartWorkoutDB startWorkoutDB = new StartWorkoutDB();
 
         private void StartWorkout_Click(object sender, EventArgs e)
         {
             WorkoutMenu wm = new WorkoutMenu();
+            startWorkoutDB.startWorkout();
             wm.Show();
             this.Close();
+        }
+
+        private void get_log_button_Click(object sender, EventArgs e)
+        {
+            GetLogDB g = new GetLogDB();
+            g.LogMaker();
+            MessageBox.Show(g.completeLog(), "Workout Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

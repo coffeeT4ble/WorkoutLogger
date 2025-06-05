@@ -18,10 +18,9 @@ namespace APP
             using (SqlConnection conn = DBHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT EName, EDescription FROM Exercises WHERE EName LIKE '%"+t.Text+"%';";
+                string query = "SELECT EName, EDescription FROM Exercises WHERE EName LIKE '%" + t.Text + "%';";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@UserId", LoginDB.UserId);
                     SqlDataReader reader = cmd.ExecuteReader();
                     int index = 0;
                     while (reader.Read() && index < 5)
@@ -36,6 +35,23 @@ namespace APP
                             case 4: s4.Text = exerciseName; break;
                         }
                         index++;
+                    }
+                    reader.Close();
+                }
+            }
+        }
+        public void getID(string eName)
+        {
+            using (SqlConnection conn = DBHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT ExerciseID FROM Exercises WHERE EName = '"+eName+"'";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        chosenExerciseID = reader.GetInt32(0);
                     }
                     reader.Close();
                 }

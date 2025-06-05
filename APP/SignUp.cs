@@ -43,5 +43,6 @@ namespace APP
             signUpDB.SignUp(username_text_box.Text, email_text_box.Text, password_text_box.Text);
             this.Close();
         }
+
     }
 }

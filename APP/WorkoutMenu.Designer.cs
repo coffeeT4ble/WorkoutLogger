@@ -35,11 +35,12 @@
             this.search3 = new System.Windows.Forms.Label();
             this.search4 = new System.Windows.Forms.Label();
             this.listOfExercises = new System.Windows.Forms.Button();
+            this.end_workout_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(256, 104);
+            this.textBox1.Location = new System.Drawing.Point(105, 54);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 20);
             this.textBox1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             this.search0.AutoSize = true;
             this.search0.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search0.Location = new System.Drawing.Point(253, 151);
+            this.search0.Location = new System.Drawing.Point(102, 101);
             this.search0.Name = "search0";
             this.search0.Size = new System.Drawing.Size(67, 23);
             this.search0.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             this.search1.AutoSize = true;
             this.search1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search1.Location = new System.Drawing.Point(253, 188);
+            this.search1.Location = new System.Drawing.Point(102, 138);
             this.search1.Name = "search1";
             this.search1.Size = new System.Drawing.Size(64, 23);
             this.search1.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             this.search2.AutoSize = true;
             this.search2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search2.Location = new System.Drawing.Point(253, 225);
+            this.search2.Location = new System.Drawing.Point(102, 175);
             this.search2.Name = "search2";
             this.search2.Size = new System.Drawing.Size(67, 23);
             this.search2.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             this.search3.AutoSize = true;
             this.search3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search3.Location = new System.Drawing.Point(253, 258);
+            this.search3.Location = new System.Drawing.Point(102, 208);
             this.search3.Name = "search3";
             this.search3.Size = new System.Drawing.Size(67, 23);
             this.search3.TabIndex = 4;
@@ -93,7 +94,7 @@
             // 
             this.search4.AutoSize = true;
             this.search4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search4.Location = new System.Drawing.Point(253, 296);
+            this.search4.Location = new System.Drawing.Point(102, 246);
             this.search4.Name = "search4";
             this.search4.Size = new System.Drawing.Size(67, 23);
             this.search4.TabIndex = 5;
@@ -102,20 +103,33 @@
             // 
             // listOfExercises
             // 
-            this.listOfExercises.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listOfExercises.Location = new System.Drawing.Point(888, 240);
+            this.listOfExercises.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listOfExercises.Location = new System.Drawing.Point(615, 54);
             this.listOfExercises.Name = "listOfExercises";
-            this.listOfExercises.Size = new System.Drawing.Size(174, 88);
+            this.listOfExercises.Size = new System.Drawing.Size(183, 131);
             this.listOfExercises.TabIndex = 6;
             this.listOfExercises.Text = "List Of Exercises";
             this.listOfExercises.UseVisualStyleBackColor = true;
             this.listOfExercises.Click += new System.EventHandler(this.listOfExercises_Click);
             // 
+            // end_workout_button
+            // 
+            this.end_workout_button.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.end_workout_button.Location = new System.Drawing.Point(615, 237);
+            this.end_workout_button.Name = "end_workout_button";
+            this.end_workout_button.Size = new System.Drawing.Size(183, 114);
+            this.end_workout_button.TabIndex = 7;
+            this.end_workout_button.Text = "Stop Workout";
+            this.end_workout_button.UseVisualStyleBackColor = true;
+            this.end_workout_button.Click += new System.EventHandler(this.end_workout_button_Click);
+            // 
             // WorkoutMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 630);
+            this.ClientSize = new System.Drawing.Size(959, 500);
+            this.ControlBox = false;
+            this.Controls.Add(this.end_workout_button);
             this.Controls.Add(this.listOfExercises);
             this.Controls.Add(this.search4);
             this.Controls.Add(this.search3);
@@ -139,5 +153,6 @@
         private System.Windows.Forms.Label search3;
         private System.Windows.Forms.Label search4;
         private System.Windows.Forms.Button listOfExercises;
+        private System.Windows.Forms.Button end_workout_button;
     }
 }

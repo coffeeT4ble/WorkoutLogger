@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfirmSetsReps.cs" />
-    <Compile Include="ConnectToDB.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="ExerciseSetting.cs">
       <SubType>Form</SubType>
@@ -58,6 +57,7 @@
     <Compile Include="ExerciseSetting.Designer.cs">
       <DependentUpon>ExerciseSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetLogDB.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,7 +76,6 @@
     </Compile>
     <Compile Include="SignUpDB.cs" />
     <Compile Include="StartWorkoutDB.cs" />
-    <Compile Include="Test.cs" />
     <Compile Include="UserOptions.cs">
       <SubType>Form</SubType>
     </Compile>

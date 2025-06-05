@@ -25,6 +25,8 @@ CREATE TABLE WorkoutLogs (
     FOREIGN KEY (WorkoutID) REFERENCES WorkoutSessions(WorkoutID),
     FOREIGN KEY (ExerciseID) REFERENCES Exercises(ExerciseID)
 );
+
+
 INSERT INTO Users(Username, Email, PasswordHash) VALUES ('test', 'test@test.com', 'test');
 
 INSERT INTO Exercises (EName, EDescription) VALUES
@@ -51,6 +53,3 @@ INSERT INTO Exercises (EName, EDescription) VALUES
 ('Sitting LegCurls', 'Hamstring isolation using a seated curl machine.'),
 ('Standing Calf Raises', 'Calf raise performed standing, often with a machine or barbell.'),
 ('Sitting Calf Raises', 'Calf raise while seated, typically with a dedicated machine.');
-
-INSERT INTO WorkoutSessions(StartTime, UserID) VALUES (GETDATE(), 1);
-INSERT INTO WorkoutLogs(WorkoutID, ExerciseID, WWeight, WSets, RepsPerSet) VALUES

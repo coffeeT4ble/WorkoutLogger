@@ -28,7 +28,8 @@ namespace APP
                         {
                             int userId = reader.GetInt32(0);
                             UserId = userId;
-                            UserName = reader.GetString(1);
+                            string uname = reader.GetString(1);
+                            UserName = uname;
                         }
                         reader.Close();
                         f1.Hide();
