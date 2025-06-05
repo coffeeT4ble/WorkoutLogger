@@ -17,6 +17,9 @@ namespace APP
         string time;
         int workoutID;
         public static List<string> logList = new List<string>();
+        /// <summary>
+        /// Fetches all workout sessions for the current user and appends their log strings to <see cref="logList"/>.
+        /// </summary>
         public void LogMaker()
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -49,6 +52,9 @@ namespace APP
             }
         }
         string details;
+        /// <summary>
+        /// Retrieves detailed exercise logs for the current workout ID.
+        /// </summary>
         public void Details()
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -75,6 +81,10 @@ namespace APP
                 }
             }
         }
+        /// <summary>
+        /// Concatenates all logs from <see cref="logList"/> into a single string.
+        /// </summary>
+        /// <returns>A full string of all workout logs.</returns>
         public String completeLog()
         {
             string completeLog = "";

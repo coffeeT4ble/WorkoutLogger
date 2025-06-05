@@ -7,10 +7,20 @@ using System.Threading.Tasks;
 
 namespace APP
 {
+    /// <summary>
+    /// Handles operations related to starting a workout and loading exercises from the database.
+    /// </summary>
     internal class StartWorkoutDB
     {
+        /// <summary>
+        /// Stores a dictionary of exercise names and their descriptions.
+        /// Key: Exercise name (EName), Value: Exercise description (EDescription).
+        /// </summary>
         public static Dictionary<string, string> exercises = new Dictionary<string, string>();
         public StartWorkoutDB() { }
+        /// <summary>
+        /// Loads all exercises from the database into the static dictionary if not already added.
+        /// </summary>
         public void AddExercise()
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -33,6 +43,10 @@ namespace APP
                 }
             }
         }
+        /// <summary>
+        /// Returns a formatted string of all loaded exercises and their descriptions.
+        /// </summary>
+        /// <returns>A multi-line string containing all exercises and their details.</returns>
         public string getE()
         {
             StringBuilder all = new StringBuilder();
@@ -42,6 +56,9 @@ namespace APP
             }
             return all.ToString();
         }
+        /// <summary>
+        /// Starts a workout session by inserting the current time and user ID into the database.
+        /// </summary>
         public void startWorkout()
         {
             using (SqlConnection conn = DBHelper.GetConnection())

@@ -13,6 +13,15 @@ namespace APP
         public SearchExerciseDB() { }
         public static int chosenExerciseID;
         public static string chosenExerciseName;
+        /// <summary>
+        /// Searches for exercises that match the text in the given TextBox and displays up to 5 results in the provided labels.
+        /// </summary>
+        /// <param name="s0">Label for the first result.</param>
+        /// <param name="s1">Label for the second result.</param>
+        /// <param name="s2">Label for the third result.</param>
+        /// <param name="s3">Label for the fourth result.</param>
+        /// <param name="s4">Label for the fifth result.</param>
+        /// <param name="t">TextBox containing the search input.</param>
         public void Search(Label s0, Label s1, Label s2, Label s3, Label s4, TextBox t)
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -40,6 +49,10 @@ namespace APP
                 }
             }
         }
+        /// <summary>
+        /// Retrieves the ID of a given exercise name from the database and stores it in <c>chosenExerciseID</c>.
+        /// </summary>
+        /// <param name="eName">The exact name of the exercise to look up.</param>
         public void getID(string eName)
         {
             using (SqlConnection conn = DBHelper.GetConnection())

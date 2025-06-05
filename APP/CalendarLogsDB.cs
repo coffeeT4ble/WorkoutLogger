@@ -14,6 +14,10 @@ namespace APP
         string time;
         int workoutID;
         public static List<string> logList = new List<string>();
+        /// <summary>
+        /// Retrieves and formats all workout logs for a specific date for the current user.
+        /// </summary>
+        /// <param name="selectedDateString">The date to search for workouts, in 'yyyy-MM-dd' format.</param>
         public void LogMaker(string selectedDateString)
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -46,6 +50,9 @@ namespace APP
             }
         }
         string details;
+        /// <summary>
+        /// Retrieves exercise details for the current workout ID.
+        /// </summary>
         public void Details()
         {
             using (SqlConnection conn = DBHelper.GetConnection())
@@ -72,6 +79,10 @@ namespace APP
                 }
             }
         }
+        /// <summary>
+        /// Returns a combined string of all logs in the static logList.
+        /// </summary>
+        /// <returns>Formatted string containing all logs.</returns>
         public String completeLog()
         {
             string completeLog = "";

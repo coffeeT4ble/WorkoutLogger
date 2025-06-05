@@ -14,7 +14,11 @@ namespace APP
     public partial class ucDays : UserControl
     {
         string _day, date, weekday;
-
+        /// <summary>
+        /// Initializes a new instance of the ucDays UserControl with a specified day.
+        /// Sets label text and hides the checkbox.
+        /// </summary>
+        /// <param name="day">The day of the month represented by this control.</param>
         private void panel1_Click(object sender, EventArgs e)
         {
             DateTime selectedDate = new DateTime(Calendar._year, Calendar._month, Convert.ToInt32(_day));
@@ -24,7 +28,10 @@ namespace APP
             MessageBox.Show($"Logs for {_day} {Calendar._month}/{Calendar._year}\n{db.completeLog()}", "Logs Generated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CalendarLogsDB.logList.Clear();
         }
-
+        /// <summary>
+        /// Event handler for when the control is loaded.
+        /// (Currently unused, but can be used for initialization.)
+        /// </summary>
         public ucDays(string day)
         {
             InitializeComponent();

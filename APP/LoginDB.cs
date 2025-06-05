@@ -12,6 +12,13 @@ namespace APP
     {
         public static int UserId;
         public static string UserName;
+        /// <summary>
+        /// Validates the user's login credentials and navigates between forms upon successful login.
+        /// </summary>
+        /// <param name="email">The email input entered by the user.</param>
+        /// <param name="password">The password input entered by the user.</param>
+        /// <param name="f1">The current form (login screen) to be hidden if login is successful.</param>
+        /// <param name="f2">The next form (e.g., dashboard) to be shown after successful login.</param>
         public void CheckValid(string email, string password, Form f1, Form f2)
         {
             using (SqlConnection conn = DBHelper.GetConnection())

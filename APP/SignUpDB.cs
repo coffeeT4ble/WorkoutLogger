@@ -12,6 +12,13 @@ namespace APP
     internal class SignUpDB
     {
         public SignUpDB() { }
+        /// <summary>
+        /// Attempts to create a new user account in the database using the provided credentials.
+        /// Displays message boxes indicating success or specific errors (e.g., duplicate entries or invalid email format).
+        /// </summary>
+        /// <param name="username">The username for the new account.</param>
+        /// <param name="email">The email address for the new account.</param>
+        /// <param name="password">The password (or hash) for the new account.</param>
         public void SignUp(string username, string email, string password)
         {
             try
