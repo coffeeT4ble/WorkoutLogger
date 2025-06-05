@@ -53,3 +53,10 @@ INSERT INTO Exercises (EName, EDescription) VALUES
 ('Sitting LegCurls', 'Hamstring isolation using a seated curl machine.'),
 ('Standing Calf Raises', 'Calf raise performed standing, often with a machine or barbell.'),
 ('Sitting Calf Raises', 'Calf raise while seated, typically with a dedicated machine.');
+
+SELECT 
+    WorkoutID,
+    StartTime AS WorkoutDate
+FROM WorkoutSessions
+WHERE UserID = 1 and StartTime LIKE '%2025-06-05%'
+ORDER BY StartTime DESC;

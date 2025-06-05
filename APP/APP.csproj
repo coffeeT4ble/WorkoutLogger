@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarLogsDB.cs" />
     <Compile Include="ConfirmSetsReps.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="ExerciseSetting.cs">
@@ -76,6 +83,12 @@
     </Compile>
     <Compile Include="SignUpDB.cs" />
     <Compile Include="StartWorkoutDB.cs" />
+    <Compile Include="ucDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDays.Designer.cs">
+      <DependentUpon>ucDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +101,9 @@
     <Compile Include="WorkoutMenu.Designer.cs">
       <DependentUpon>WorkoutMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExerciseSetting.resx">
       <DependentUpon>ExerciseSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDays.resx">
+      <DependentUpon>ucDays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserOptions.resx">
       <DependentUpon>UserOptions.cs</DependentUpon>

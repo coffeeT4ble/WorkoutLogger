@@ -31,5 +31,9 @@
 - you can Alt+F4 from the login screen but nowhere else
 
 - Get log of your workouts
+  
+  - either in text via Workout Log button
+  
+  - or the Calendar
 
 - Every user is limited to accessing only their own workouts

@@ -2,27 +2,24 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace APP
 {
-    internal class GetLogDB
+    internal class CalendarLogsDB
     {
-        public GetLogDB() { }
+        public CalendarLogsDB() { }
         string fullLog;
         string time;
         int workoutID;
         public static List<string> logList = new List<string>();
-        public void LogMaker()
+        public void LogMaker(string selectedDateString)
         {
             using (SqlConnection conn = DBHelper.GetConnection())
             {
                 conn.Open();
-                string query = $"SELECT WorkoutID, StartTime AS WorkoutDate FROM WorkoutSessions WHERE UserID = {LoginDB.UserId} ORDER BY StartTime;";
+                string query = $"SELECT WorkoutID, StartTime AS WorkoutDate FROM WorkoutSessions WHERE UserID = {LoginDB.UserId} AND StartTime Like '%{selectedDateString}%' ORDER BY StartTime;";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {

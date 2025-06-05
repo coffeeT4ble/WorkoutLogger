@@ -38,5 +38,11 @@ namespace APP
         {
             Application.Exit();
         }
+
+        private void calendar_button_Click(object sender, EventArgs e)
+        {
+            Calendar c = new Calendar();
+            c.Show();
+        }
     }
 }
