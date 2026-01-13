@@ -7,7 +7,8 @@
 - Microsoft Visual Studio
 
 ## Use
-
+- open the .sln file in Visual Studio
+  
 - Start either in the IDE or execute the .exe file in the Debud directory
 
 - for testing login to:
