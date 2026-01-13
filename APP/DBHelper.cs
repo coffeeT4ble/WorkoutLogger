@@ -10,7 +10,7 @@ namespace APP
 {
     public static class DBHelper
     {
-        private static readonly string conn_string = "Server=193.85.203.188;Database=malhotra;User Id=malhotra;Password=fXd8BQ9KCi;";
+        private static readonly string conn_string = "Server=193.85.203.188;Database=malhotra;User Id=malhotra;Password=@fXd8BQ9KCi;";
         public static SqlConnection GetConnection()
         {
             return new SqlConnection(conn_string);
