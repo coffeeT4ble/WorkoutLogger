@@ -8,6 +8,7 @@
 
 ## Use
 - open the .sln file in Visual Studio
+- build or run and close it, then go to APP/bin/Debug and find the .exe file
   
 - Start either in the IDE or execute the .exe file in the Debud directory
 
